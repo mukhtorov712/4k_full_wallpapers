@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="uz.pdp.a4kfullwallpapers.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="uz.pdp.a4kfullwallpapers.ui.popular.PopularFragment"
+        android:label="Popular"
+        tools:layout="@layout/fragment_popular" />
+    <fragment
+        android:id="@+id/nav_random"
+        android:name="uz.pdp.a4kfullwallpapers.ui.random.RandomFragment"
+        android:label="Random"
+        tools:layout="@layout/fragment_random" />
+    <fragment
+        android:id="@+id/nav_liked"
+        android:name="uz.pdp.a4kfullwallpapers.ui.liked.LikedFragment"
+        android:label="Liked"
+        tools:layout="@layout/fragment_liked" />
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="uz.pdp.a4kfullwallpapers.ui.home.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" >
+        <action
+            android:id="@+id/action_photoFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="uz.pdp.a4kfullwallpapers.MainActivity"
+        android:label="app_bar_main"
+        tools:layout="@layout/app_bar_main" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="uz.pdp.a4kfullwallpapers.ui.home.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+</navigation>
