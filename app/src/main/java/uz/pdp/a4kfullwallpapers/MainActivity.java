@@ -1,13 +1,10 @@
 package uz.pdp.a4kfullwallpapers;
 
-import android.app.WallpaperManager;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,17 +27,14 @@ import eightbitlab.com.blurview.BlurView;
 import eightbitlab.com.blurview.RenderScriptBlur;
 
 import uz.pdp.a4kfullwallpapers.databinding.ActivityMainBinding;
-import uz.pdp.a4kfullwallpapers.ui.home.InstallType;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-    private BlurView blurView;
     private NavController navController;
     private DrawerLayout drawer;
-    private int clickInfo = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
